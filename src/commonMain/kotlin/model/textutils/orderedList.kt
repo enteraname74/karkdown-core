@@ -9,12 +9,10 @@ fun String.isOrderedList(): Boolean {
 }
 
 /**
- * Build a blockquote line from a given start quotes line.
+ * Build an ordered list line from a given start quotes line.
  */
-fun String.toOrderedList(listIndicator: Int): String {
-    return if (this.isEmpty()) "$listIndicator. "
-    else "$listIndicator. $this"
-}
+fun String.toOrderedList(listIndicator: Int): String =
+    "$listIndicator. $this"
 
 /**
  * Retrieve the content of an ordered list to show to a user.

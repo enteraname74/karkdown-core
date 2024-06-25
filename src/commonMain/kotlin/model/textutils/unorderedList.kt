@@ -4,17 +4,15 @@ package model.textutils
  * Check if a line is an unordered list.
  */
 fun String.isUnorderedList(): Boolean {
-    val regex = Regex("^(-|\\*|\\+) .*")
+    val regex = Regex("""^([-*+]) .*""")
     return regex.matches(this)
 }
 
 /**
  * Build a blockquote line from a given start quotes line.
  */
-fun String.toUnorderedList(listIndicator: String): String {
-    return if (this.isEmpty()) "$listIndicator "
-    else "$listIndicator $this"
-}
+fun String.toUnorderedList(listIndicator: String): String =
+    "$listIndicator $this"
 
 /**
  * Retrieve the content of an unordered list to show to a user.
@@ -28,5 +26,6 @@ fun String.unorderedListContent(): String {
  * If nothing is found, it returns the default indicator used, "-".
  */
 fun String.unorderedListIndicator(): String {
-    return this.firstNotNullOf { "-" }
+    val regex = Regex("""(.) .*""")
+    return regex.find(this)?.destructured?.toList()?.get(0) ?: "-"
 }

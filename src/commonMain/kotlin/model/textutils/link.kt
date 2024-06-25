@@ -12,7 +12,7 @@ fun String.isLink(): Boolean {
  * Retrieve the name of a link.
  */
 fun String.linkName(): String {
-    val regex = Regex(".*\\[(.*)\\]\\((.*?)\\).*")
+    val regex = Regex(""".*\[(.*)]\((.*?)\).*""")
     return regex.find(this)?.destructured?.toList()?.get(0) ?: this
 }
 
@@ -20,6 +20,6 @@ fun String.linkName(): String {
  * Retrieve the url of a link.
  */
 fun String.linkUrl(): String {
-    val regex = Regex(".*\\[(.*)\\]\\((.*?)\\).*")
+    val regex = Regex(""".*\[(.*)]\((.*?)\).*""")
     return regex.find(this)?.destructured?.toList()?.get(1) ?: this
 }

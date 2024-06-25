@@ -21,6 +21,6 @@ fun String.headerLevel(): Int {
  * Retrieve the content of a header line to show to a user.
  */
 fun String.headerContent(): String {
-    val regex = Regex("\\w.*")
-    return regex.find(this)?.value ?: ""
+    val regex = Regex("""^#+ (.*)""")
+    return regex.find(this)?.destructured?.toList()?.getOrNull(0) ?: this
 }

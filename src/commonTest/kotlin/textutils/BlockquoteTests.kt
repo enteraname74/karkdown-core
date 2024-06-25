@@ -3,16 +3,20 @@ package textutils
 import model.textutils.*
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
 
 internal class BlockquoteTests {
 
     @Test
-    fun givenBlockquote_whenCheckIfBlockquote_thenShouldReturnTrue() {
+    fun givenBlockquote_whenCheckIfBlockquote_thenShouldReturnCorrectValue() {
         val simpleBlockquotes = "> Simple blockquote"
         assert(simpleBlockquotes.isBlockquote())
 
         val nestedBlockquotes = ">>> Nested blockquote"
         assert(nestedBlockquotes.isBlockquote())
+
+        val notBlockquote = "Hello world!"
+        assertFalse(notBlockquote.isBlockquote())
     }
 
     @Test

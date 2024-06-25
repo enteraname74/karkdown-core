@@ -4,7 +4,7 @@ package model.textutils
  * Check if a string is bold.
  */
 fun String.isBold(): Boolean {
-    val regex = Regex("(\\*{2}.+\\*{2})")
+    val regex = Regex("""\*{2}.+\*{2}""")
     return regex.matches(this)
 }
 
