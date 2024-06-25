@@ -28,6 +28,7 @@ fun String.blockquoteQuotes(): String {
 
 /**
  * Retrieve the content of a blockquote to show to a user.
+ * When given a nested blockquote, it will return the next nested blockquote.
  */
 fun String.blockquoteContent(): String {
     return this.replaceFirst(">", "").trimStart()
@@ -44,7 +45,7 @@ fun String.blockquoteInnerText(): String {
  * Build a blockquote line from a given start quotes line.
  */
 fun String.toBlockQuote(): String {
-    if (this.isEmpty()) return ">"
+    if (this.isEmpty()) return "> "
 
     val optionalSpace = if (this.first() == '>') "" else " "
 
