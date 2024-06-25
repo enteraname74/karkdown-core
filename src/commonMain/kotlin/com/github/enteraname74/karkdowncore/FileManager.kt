@@ -1,6 +1,5 @@
-package model
+package com.github.enteraname74.karkdowncore
 
-import model.markdownelement.MarkdownElement
 import java.io.File
 import java.nio.file.Path
 import kotlin.io.path.Path
@@ -19,7 +18,7 @@ class FileManager {
     private var rowData: ArrayList<String> = ArrayList()
 
     private var fileBuilder = FileBuilder()
-    var content: ArrayList<MarkdownElement> = ArrayList()
+    var content: ArrayList<com.github.enteraname74.karkdowncore.markdownelement.MarkdownElement> = ArrayList()
     var userPosition: Int = 0
     val isDataUpdated: Boolean
         get() = rowData == lastSavedRowData
@@ -41,14 +40,27 @@ class FileManager {
         get() = content.size
 
     /**
-     * Open a file.
+     * Initialize the FileManager from a file's content.
      */
-    fun openFile(path: String) {
+    fun fromFile(path: String) {
         try {
             filepath = Path(path)
-            getContent(path)
+            rowData = try {
+                File(path).readLines() as ArrayList<String>
+            } catch (_: Exception) {
+                ArrayList()
+            }
+            initializeFileManager()
         } catch (_: Exception) {
         }
+    }
+
+    /**
+     * Initialize the FileManager from a list of lines.
+     */
+    fun fromLines(lines: List<String>) {
+        rowData = lines as ArrayList<String>
+        initializeFileManager()
     }
 
     /**
@@ -77,12 +89,12 @@ class FileManager {
         }
     }
 
-    private fun getContent(path: String) {
-        rowData = try {
-            File(path).readLines() as ArrayList<String>
-        } catch (_: Exception) {
-            ArrayList()
-        }
+    /**
+     * Initialize the FileManager from its rowData.
+     * The rowData of the FileManager should be before calling this method
+     * with [fromFile] or [fromLines]
+     */
+    private fun initializeFileManager() {
         content = fileFormatter.formatMarkdownElements(
             elements = fileBuilder.buildMarkdownFile(rowData)
         )
@@ -176,7 +188,7 @@ class FileManager {
     /**
      * Retrieve the row data of a file from its markdown elements.
      */
-    private fun List<MarkdownElement>.toRowData(): ArrayList<String> {
+    private fun List<com.github.enteraname74.karkdowncore.markdownelement.MarkdownElement>.toRowData(): ArrayList<String> {
         return ArrayList(this.map { it.rowData })
     }
 }

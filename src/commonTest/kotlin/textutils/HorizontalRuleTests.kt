@@ -1,6 +1,6 @@
 package textutils
 
-import model.textutils.isHorizontalRule
+import com.github.enteraname74.karkdowncore.textutils.isHorizontalRule
 import kotlin.test.Test
 import kotlin.test.assertFalse
 

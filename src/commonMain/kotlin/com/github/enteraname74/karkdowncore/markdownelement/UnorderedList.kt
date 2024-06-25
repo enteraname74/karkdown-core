@@ -1,6 +1,6 @@
-package model.markdownelement
+package com.github.enteraname74.karkdowncore.markdownelement
 
-import model.textutils.unorderedListIndicator
+import com.github.enteraname74.karkdowncore.textutils.unorderedListIndicator
 
 /**
  * Represent an unordered list.

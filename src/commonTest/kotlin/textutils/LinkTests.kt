@@ -1,8 +1,8 @@
 package textutils
 
-import model.textutils.isLink
-import model.textutils.linkName
-import model.textutils.linkUrl
+import com.github.enteraname74.karkdowncore.textutils.isLink
+import com.github.enteraname74.karkdowncore.textutils.linkName
+import com.github.enteraname74.karkdowncore.textutils.linkUrl
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

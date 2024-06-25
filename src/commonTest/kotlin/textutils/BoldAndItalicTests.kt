@@ -1,7 +1,7 @@
 package textutils
 
-import model.textutils.boldAndItalicContent
-import model.textutils.isBoldAndItalic
+import com.github.enteraname74.karkdowncore.textutils.boldAndItalicContent
+import com.github.enteraname74.karkdowncore.textutils.isBoldAndItalic
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

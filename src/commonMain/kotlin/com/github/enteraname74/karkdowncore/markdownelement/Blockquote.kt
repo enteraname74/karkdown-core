@@ -1,7 +1,7 @@
-package model.markdownelement
+package com.github.enteraname74.karkdowncore.markdownelement
 
-import model.textutils.blockquoteLevel
-import model.textutils.blockquoteQuotes
+import com.github.enteraname74.karkdowncore.textutils.blockquoteLevel
+import com.github.enteraname74.karkdowncore.textutils.blockquoteQuotes
 
 /**
  * Represent a blockquote.

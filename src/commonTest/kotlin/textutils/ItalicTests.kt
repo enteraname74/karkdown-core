@@ -1,7 +1,7 @@
 package textutils
 
-import model.textutils.isItalic
-import model.textutils.italicContent
+import com.github.enteraname74.karkdowncore.textutils.isItalic
+import com.github.enteraname74.karkdowncore.textutils.italicContent
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

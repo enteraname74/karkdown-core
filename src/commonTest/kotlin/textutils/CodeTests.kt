@@ -1,7 +1,7 @@
 package textutils
 
-import model.textutils.codeContent
-import model.textutils.isCode
+import com.github.enteraname74.karkdowncore.textutils.codeContent
+import com.github.enteraname74.karkdowncore.textutils.isCode
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

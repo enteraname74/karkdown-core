@@ -1,7 +1,7 @@
 package textutils
 
-import model.textutils.headerContent
-import model.textutils.isHeader
+import com.github.enteraname74.karkdowncore.textutils.headerContent
+import com.github.enteraname74.karkdowncore.textutils.isHeader
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

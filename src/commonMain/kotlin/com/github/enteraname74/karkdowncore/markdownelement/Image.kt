@@ -1,7 +1,7 @@
-package model.markdownelement
+package com.github.enteraname74.karkdowncore.markdownelement
 
-import model.textutils.imageName
-import model.textutils.imagePath
+import com.github.enteraname74.karkdowncore.textutils.imageName
+import com.github.enteraname74.karkdowncore.textutils.imagePath
 
 /**
  * Represent an image information (name and path).

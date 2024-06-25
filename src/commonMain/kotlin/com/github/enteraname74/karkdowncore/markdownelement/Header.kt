@@ -1,8 +1,7 @@
-package model.markdownelement
+package com.github.enteraname74.karkdowncore.markdownelement
 
-import model.textutils.headerContent
-import model.textutils.headerLevel
-import model.textutils.withoutMarkdown
+import com.github.enteraname74.karkdowncore.textutils.headerContent
+import com.github.enteraname74.karkdowncore.textutils.headerLevel
 
 
 /**

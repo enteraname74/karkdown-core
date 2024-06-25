@@ -1,4 +1,4 @@
-package model.textutils
+package com.github.enteraname74.karkdowncore.textutils
 
 /**
  * Check if a line is a blockquote.

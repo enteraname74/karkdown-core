@@ -1,4 +1,4 @@
-package model.markdownelement
+package com.github.enteraname74.karkdowncore.markdownelement
 
 /**
  * Represent a markdown element.

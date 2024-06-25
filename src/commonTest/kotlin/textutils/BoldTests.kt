@@ -1,7 +1,7 @@
 package textutils
 
-import model.textutils.boldContent
-import model.textutils.isBold
+import com.github.enteraname74.karkdowncore.textutils.boldContent
+import com.github.enteraname74.karkdowncore.textutils.isBold
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

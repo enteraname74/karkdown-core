@@ -1,10 +1,10 @@
-package model.textutils
+package com.github.enteraname74.karkdowncore.textutils
 
 /**
  * Check if a line is an ordered list.
  */
 fun String.isOrderedList(): Boolean {
-    val regex = Regex("\\d+\\. .*");
+    val regex = Regex("\\d+\\. .*")
     return regex.matches(this)
 }
 

@@ -1,6 +1,4 @@
-package model.markdownelement
-
-import model.textutils.withoutMarkdown
+package com.github.enteraname74.karkdowncore.markdownelement
 
 /**
  * Represent a simple text.

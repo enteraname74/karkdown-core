@@ -1,9 +1,9 @@
 package textutils
 
-import model.textutils.imageName
-import model.textutils.imagePath
-import model.textutils.isImage
-import model.textutils.isURL
+import com.github.enteraname74.karkdowncore.textutils.imageName
+import com.github.enteraname74.karkdowncore.textutils.imagePath
+import com.github.enteraname74.karkdowncore.textutils.isImage
+import com.github.enteraname74.karkdowncore.textutils.isURL
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

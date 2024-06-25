@@ -1,6 +1,6 @@
 package textutils
 
-import model.textutils.*
+import com.github.enteraname74.karkdowncore.textutils.*
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

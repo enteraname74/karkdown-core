@@ -1,9 +1,9 @@
 package textutils
 
-import model.textutils.isOrderedList
-import model.textutils.orderedListContent
-import model.textutils.orderedListIndicator
-import model.textutils.toOrderedList
+import com.github.enteraname74.karkdowncore.textutils.isOrderedList
+import com.github.enteraname74.karkdowncore.textutils.orderedListContent
+import com.github.enteraname74.karkdowncore.textutils.orderedListIndicator
+import com.github.enteraname74.karkdowncore.textutils.toOrderedList
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
