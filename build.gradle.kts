@@ -6,9 +6,9 @@ kotlin {
     jvmToolchain(17)
 }
 
+version = "0.1.0"
+
 repositories {
-    jcenter()
-    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     google()
     gradlePluginPortal()
     mavenCentral()
