@@ -1,5 +1,6 @@
 package com.github.enteraname74.karkdowncore
 
+import com.github.enteraname74.karkdowncore.markdownelement.MarkdownElement
 import java.io.File
 import java.nio.file.Path
 import kotlin.io.path.Path
@@ -18,7 +19,7 @@ class FileManager {
     private var rowData: ArrayList<String> = ArrayList()
 
     private var fileBuilder = FileBuilder()
-    var content: ArrayList<com.github.enteraname74.karkdowncore.markdownelement.MarkdownElement> = ArrayList()
+    var content: ArrayList<MarkdownElement> = ArrayList()
     var userPosition: Int = 0
     val isDataUpdated: Boolean
         get() = rowData == lastSavedRowData
@@ -188,7 +189,7 @@ class FileManager {
     /**
      * Retrieve the row data of a file from its markdown elements.
      */
-    private fun List<com.github.enteraname74.karkdowncore.markdownelement.MarkdownElement>.toRowData(): ArrayList<String> {
+    private fun List<MarkdownElement>.toRowData(): ArrayList<String> {
         return ArrayList(this.map { it.rowData })
     }
 }
